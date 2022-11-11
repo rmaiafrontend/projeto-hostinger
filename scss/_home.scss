@@ -1,0 +1,274 @@
+.s-hero {
+    margin-top: 11.9rem;
+    background-color: $purple;
+    padding-top: 3.9rem;
+    .container {
+        @include flex(row, flex-start, space-between);
+        .text {
+            width: 100%;
+            max-width: 55rem;
+
+            h1 {
+                font-family: 'PT Sans', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 120%;
+                color: #FFFFFF;
+            }
+
+            p {
+                margin-top: 1.6rem;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                max-width: 48.2rem;
+                color: #FFFFFF;
+            }
+
+            button {
+                @include style-btn(5.4rem, $yellow, #503387);
+                margin-top: 3.2rem;
+            }
+
+            .conheca {
+                a {
+                @include flex(row, center, space-start); 
+                align-items: center;
+                margin-top: 8.6rem;
+                }
+                .arrow {
+                    @include flex(row, center, center);
+                    max-width: 100%;
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    border-radius: 6px;
+                    background-color: rgba(124, 90, 186, 0.4);
+                }
+                span {
+                    margin-left: 16px;
+                    font-family: 'Lato';
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF
+                }
+            }
+        }
+   
+
+    .ilustration {
+        position: relative;
+        top: 3.4rem;
+    }
+
+    }
+    @include responsive(1280px){
+        .container{
+            .text{
+                .conheca{
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(991px) {
+        .container{
+        flex-direction: column;
+            a {
+                justify-content: center;
+            }
+            .text {
+                max-width: 100%;
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    margin-bottom: 1.6rem;
+                    max-width: 100%;
+                    text-align: center;
+                }
+                button {
+                    display: block;
+                    margin: 0 auto;
+                }
+                .conheca {
+                    justify-content: center;
+                    margin-top: -6rem;
+                    margin-bottom: 3rem;
+                }
+            }
+
+        }
+        
+
+}
+
+    @include responsive (600px) {
+    padding-top: 3.5rem;
+    margin-top: 8rem;
+    .container{
+    .text {
+        h1 {
+            font-size: 4.2rem;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+    }
+    .ilustration {
+        left: -20px;
+    }
+}
+    }
+}
+
+
+
+.s-resources{
+    padding-top: 14.9rem;
+    padding-bottom: 9.9rem;
+    .top{
+        @include flex(row, center, space-between);
+        margin-bottom: 5.3rem;
+        h2 {
+            max-width: 50.2rem;
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 130%;
+            color: $grey-01;
+        }
+
+        P{
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 150%;
+            color: $grey-02;
+        }
+
+    }
+
+    .content {
+        @include flex(row, flex-start, space-between);
+        .card-feature{
+            width: 100%;
+            max-width: 28.5rem;
+            height: 32.3rem;
+            padding: 41px 34px 68px 32px;
+            background-color: rgba(197, 190, 220, 0.1);
+            border-radius: 1.2rem;
+            .icon {
+                background-color: $white;
+            }
+            .info {
+                max-width: 500.4rem;
+            }
+        }
+        .icon {
+            margin-bottom: 3rem;
+            width: 6.4rem;
+            height: 6.4rem;
+            background: rgba(197, 190, 220, 0.1);
+            border-radius: 12px;
+            @include flex(row, center, center);
+
+        }
+
+        .info {
+            max-width: 24rem;
+            h4 {
+                font-family: 'Lato', sans-serif;
+                font-weight: 800;
+                font-size: 1.8rem;
+                line-height: 22px;
+                color: $purple;
+            }
+
+            p {
+                margin-top: 2rem;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 165%;
+                color: #5E5570;
+            }
+        }
+
+        ul {
+            @include flex(row, flex-start, space-between);
+            width: 100%;
+            max-width: 90.4rem;
+            margin-top: 4.1rem;
+            padding-bottom: 6.5rem;
+            border-bottom: 3px solid rgba(95, 60, 161, 0.1);
+            padding-left: 2rem;
+            }
+    
+
+    }
+
+    @include responsive(991px) {
+        .content {
+            flex-direction: column;
+            align-items: flex-start;
+            .card-feature{
+                @include flex(column, center, center);
+                max-width: 100%;
+                height: auto;
+                padding: 3rem;
+                .info{
+                    max-width: 100%;
+                    h4,p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    } 
+
+    @include responsive(768px){
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+            .top{
+                flex-direction: column;
+                h2 {
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+            }
+            .content {
+                ul {
+                    gap: 2.5rem;
+                }
+            }
+        }
+
+    @include responsive(400px){
+        padding-top: 8rem;
+        .content {
+            ul {
+                margin-top: 3rem;
+                padding-left: 0;
+                flex-direction: column;
+                li {
+                    @include flex(column, center, center);
+                    text-align: center;
+                }
+                .info {
+                    max-width: 95%;                
+                }
+            }
+        }
+    }    
+    
+
+
+}
+
+
